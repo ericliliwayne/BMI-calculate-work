@@ -6,8 +6,8 @@ body{
     align-items: center;
     background-image: url(./bubbly-pastel-holographic-gradient-background.jpg);
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat:repeat;
+    background-size:cover;
 }
 table{
     border: 2px solid black;
@@ -34,6 +34,9 @@ th,tr,td{
     background-color: rgb(242, 247, 247,0.1);
     backdrop-filter: blur(5px);
     font-size: 20px;
+}
+h1{
+    font-size: 50px;
 }
 table:hover,.bmi:hover{
     box-shadow: 6px 6px 5px black;
@@ -114,3 +117,67 @@ button{
 label,input{
     font-size: 25px
 }
+@media (min-width:577px) and (max-width:1705px){/*RWD平板尺寸 */
+    table{
+        width: 90vw;
+    }
+    th,tr,td{
+        border: 1px solid black;
+        padding: 3px;
+        font-size: 25px;
+    }
+    .bmi{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin: 3px auto;
+        width: 90vw;
+        height: 50vh;
+        padding: 5px;
+        /* border: 1px solid red; */
+        border-radius: 20% 20%;
+        box-shadow: 3px 3px 5px black;
+        background-color: rgb(242, 247, 247,0.1);
+        backdrop-filter: blur(5px);
+        font-size: 30px;
+        
+    }
+  }
+@media (max-width:576px){/*RWD手機尺寸*/
+    table{
+        width: 95vw;
+    }
+    th,tr,td{
+        border: 1px solid black;
+        padding: 3px;
+        font-size: 10px;
+    }
+    .bmi{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        margin: 3px auto;
+        width: 90vw;
+        height: 60vh;
+        padding: 5px;
+        /* border: 1px solid red; */
+        border-radius: 20% 20%;
+        box-shadow: 3px 3px 5px black;
+        background-color: rgb(242, 247, 247,0.1);
+        backdrop-filter: blur(5px);
+        font-size: 15px;  
+    }
+    h1{
+        font-size: 35px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .p1,.p2,.p3,.p4,.p5,.p6,.p7,.p8{
+        display: block;
+    }
+  }

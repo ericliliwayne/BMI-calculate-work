@@ -120,7 +120,7 @@ if(empty($_GET)){ //若GET為空，顯示輸入欄位供輸入
 <?php
 }else{ //若有GET資料則顯示計算結果
 ?>
-    <h1 style="font-size:3rem;text-align:center">
+    <h1 style="text-align:center">
     您的BMI值為 : <p class=<?=$a?>><?=$result;?></p>
     </h1>
     <h2 style="text-align:center">判定結果為 : <?=$level;?></h2>
