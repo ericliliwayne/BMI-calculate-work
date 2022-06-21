@@ -13,25 +13,104 @@ table{
     border: 2px solid black;
     margin: 10px auto;
     box-shadow: 3px 3px 5px black;
-    background-color: rgb(242, 247, 247,0.2);
+    background-color: rgb(242, 247, 247,0.1);
     backdrop-filter: blur(5px);
     
 }
 th,tr,td{
     border: 1px solid black;
     padding: 3px;
+    font-size: 30px;
 }
 .bmi{
     display: block;
     margin: 10px auto;
-    width: 22vw;
-    height: 30vh;
+    width: 45vw;
+    height: 40vh;
+    padding: 10px;
     /* border: 1px solid red; */
     border-radius: 20% 20%;
     box-shadow: 3px 3px 5px black;
-    background-color: rgb(242, 247, 247,0.2);
+    background-color: rgb(242, 247, 247,0.1);
     backdrop-filter: blur(5px);
+    font-size: 20px;
+}
+table:hover,.bmi:hover{
+    box-shadow: 6px 6px 5px black;
 }
 form{
     text-align: center;
+}
+p{
+    display: inline;
+}
+.p1{
+    color: red;
+    -webkit-text-stroke: 0.5px black;
+    text-shadow: 2px 2px 2px black;
+}
+.p2{
+    color: pink;
+    -webkit-text-stroke: 0.5px black;
+    text-shadow: 2px 2px 2px black;
+}
+.p3{
+    color: orange;
+    -webkit-text-stroke: 0.5px black;
+    text-shadow: 2px 2px 2px black;
+}
+.p4{
+    color: green;
+    -webkit-text-stroke: 0.5px black;
+    text-shadow: 2px 2px 2px black;
+}
+.p5{
+    color: orange;
+    -webkit-text-stroke: 0.5px black;
+    text-shadow: 2px 2px 2px black;
+}
+.p6{
+    color: pink;
+    -webkit-text-stroke: 0.5px black;
+    text-shadow: 2px 2px 2px black;
+}
+.p7{
+    color: red;
+    -webkit-text-stroke: 0.5px black;
+    text-shadow: 2px 2px 2px black;
+}
+.p8{
+    color: darkred;
+    -webkit-text-stroke: 0.5px black;
+    text-shadow: 2px 2px 2px black;
+}
+button{
+    font-size: 30px;
+}
+#submit{
+    background-color: lightgreen;
+    border: 2px solid darkgreen;
+}
+#reset{
+    background-color: pink;
+    border: 2px solid red;
+}
+#return{
+    background-color: lightgray;
+    border: 2px solid gray;
+}
+#submit:hover{
+    background-color: lightgreen;
+    border: 5px outset darkgreen;
+}
+#reset:hover{
+    background-color: pink;
+    border: 5px outset red;
+}
+#return:hover{
+    background-color: lightgray;
+    border: 5px outset gray;
+}
+label,input{
+    font-size: 25px
 }

@@ -9,28 +9,36 @@ if(!empty($_GET)){ //判斷$_GET是否為空,如果不為空表示為GET的方�
 $result = round($weight / (($height/100) * ($height/100)),2); //計算BMI指數再四捨五入取小數點2位
 switch ($result) {  //依條件判定BMI的區間
     case ($result<15):
-            $level = "非常嚴重的體重不足";
+            $level = "<p class='p1'>非常嚴重的體重不足</p>";
+            $a = "p1";
         break;
-    case ($result >= 15&& $result < 16):
-            $level = "嚴重的體重不足";
+    case ($result >= 15 && $result < 16):
+            $level = "<p class='p2'>嚴重的體重不足</p>";
+            $a = "p2";
         break;
-    case ($result >= 16&& $result < 18.5):
-            $level = "體重不足";
+    case ($result >= 16 && $result < 18.5):
+            $level = "<p class='p3'>體重不足</p>";
+            $a = "p3";
         break;
-    case ($result >= 18.5&& $result < 25):
-            $level = "體重正常（健康體重)";
+    case ($result >= 18.5 && $result < 25):
+            $level = "<p class='p4'>體重正常(健康體重)</p>";
+            $a = "p4";
         break;
-    case ($result >= 25&& $result < 30):
-            $level = "體重過重";
+    case ($result >= 25 && $result < 30):
+            $level = "<p class='p5'>體重過重</p>";
+            $a = "p5";
         break;
-    case ($result >= 30&& $result < 35):
-            $level = "輕度肥胖（一級肥胖）";
+    case ($result >= 30 && $result < 35):
+            $level = "<p class='p6'>輕度肥胖(一級肥胖)</p>";
+            $a = "p6";
         break;
-    case ($result >= 35&& $result < 40):
-            $level = "重度肥胖（二級肥胖）";
+    case ($result >= 35 && $result < 40):
+            $level = "<p class='p7'>重度肥胖(二級肥胖)</p>";
+            $a = "p7";
         break;
     case ($result >= 40):
-            $level = "極重度肥胖（三級肥胖）";
+            $level = "<p class='p8'>極重度肥胖(三級肥胖)</p>";
+            $a = "p8";
         break;
 }
 ?>
@@ -52,7 +60,7 @@ switch ($result) {  //依條件判定BMI的區間
         <tr>
             <td>非常嚴重的體重不足</td>
             <td>BMI < 15</td>
-            <td rowspan="8">男性 ≧ 90 公分<br>女性 ≧ 80 公分</td>
+            <td rowspan="8">男性 ≧ 90 公分<br><br>女性 ≧ 80 公分</td>
         </tr>
         <tr>
             <td>嚴重的體重不足</td>
@@ -92,7 +100,7 @@ if(empty($_GET)){ //若GET為空，顯示輸入欄位供輸入
     <h2>
     身體質量指數 (BMI) 計算器
     </h2>
-    <p>
+    <p style="display: block;text-align:left">
     身體質量指數（Body Mass Index, BMI）世界衛生組織建議衡量肥胖程度的指標，BMI 值計算公式是以體重 (公斤) 除以身高 (公尺) 的平方，來算算看自己的 BMI 是否標準吧！
     </p>
     <label for="height">身高(cm):
@@ -106,18 +114,18 @@ if(empty($_GET)){ //若GET為空，顯示輸入欄位供輸入
     </label>
     <br>
     <br>
-    <button type="submit">立即計算</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button type="reset">清除重填</button>
+    <button type="submit" id="submit">立即計算</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="reset" id="reset">清除重填</button>
 </form>
 <?php
 }else{ //若有GET資料則顯示計算結果
 ?>
     <h1 style="font-size:3rem;text-align:center">
-    你的BMI為: <?=$result;?>
+    您的BMI值為 : <p class=<?=$a?>><?=$result;?></p>
     </h1>
-    <h2 style="text-align:center">判定結果為:<?=$level;?></h2>
+    <h2 style="text-align:center">判定結果為 : <?=$level;?></h2>
     <div style="text-align:center">
-    <a href="index.php"><button>回到BMI計算</button></a>
+    <a href="index.php"><button id="return">回到BMI計算</button></a>
     </div> 
 <?php
 }
